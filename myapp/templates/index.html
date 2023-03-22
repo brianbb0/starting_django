@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+    </head>
+    <body>
+        <h1>Wellcome to Django app</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sed nostrum, dolorum perferendis nemo corrupti vero nobis fugit molestiae illum ullam culpa natus eos, facilis ex est voluptates ad ut?
+        <img src="{% static 'sample.jpeg' %}" alt="">
+    </body>
+    </html>
+{% endblock %}

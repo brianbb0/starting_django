@@ -1,0 +1,36 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    <h1>Tasks</h1>
+{% endblock %}
+
+{% block content %}
+    <a href="{% url 'create_task'%}">Create new task</a>
+    {% for task in tasks %}
+    <p>{{task.title}} - {{task.project}}</p>
+
+        {% if task.isDone %}
+            <span id="done"> Tarea hecha </span>
+        {% else %}
+            <span id="notDone"> Tarea sin hacer </span>
+        {% endif %}
+        <br><br>
+        <button>
+            ❌Delete❌
+        </button>
+        <button>
+            ✅Update✅
+        </button>
+    {% endfor %}
+
+    <style>
+        #done {
+            color:green;
+        }
+        #notDone {
+            color:red;
+        }
+    </style>
+
+{% endblock %}
+
