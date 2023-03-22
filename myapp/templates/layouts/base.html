@@ -2,8 +2,8 @@
 {% endblock %}
 
 <a href="{% url 'index'%}">Home</a><br>
-<a href="projects">Proyectos(1)</a><br>
-<a href="tasks">Tareas(1)</a><br>
+<a href="{% url 'projects'%}">Proyectos</a><br>
+<a href="{% url 'tasks'%}">Tareas</a><br>
 
 {% block content %}
 {% endblock %}

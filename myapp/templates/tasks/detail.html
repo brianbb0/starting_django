@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    <h1>{{task.title}}</h1>
+{% endblock %}
+
+{% block content %}
+    <br>
+    {{task.description}} <br><br>
+    {% if task.isDone %}
+        <span id="done"> Tarea hecha </span>
+    {% else %}
+        <span id="notDone"> Tarea sin hacer </span>
+    {% endif %}
+    <br><br>
+    <a href="{% url 'projectsDetails' task.project_id %}">Ir al proyecto</a>
+
+    <style>
+        #done {
+            color:green;
+        }
+        #notDone {
+            color:red;
+        }
+    </style>
+{% endblock %}

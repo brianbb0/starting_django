@@ -8,7 +8,7 @@
 {% block content %}
     <a href="{% url 'create_project'%}">Nuevo proyecto</a>
     {% for project in projects %}
-    <p><a href="">{{project.name}}</a></p>
+    <p><a href="{% url 'projectsDetails' project.id %}">{{project.name}}</a></p>
     <button>
         ❌Delete❌
     </button>

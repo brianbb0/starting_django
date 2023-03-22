@@ -16,13 +16,19 @@ def projects(request):
     })
 
 def projectDetails(request, id):
-    return render(request, 'projects/show.html', {
-        'project': get_object_or_404(Project, id=id)
+    return render(request, 'projects/detail.html', {
+        'project': get_object_or_404(Project, id=id),
+        'tasks': Task.objects.filter(project_id=id)
     })
 
 def tasks(request):
     return render(request, 'tasks/show.html', {
         'tasks': Task.objects.all()
+    })
+
+def taskDetails(request, id):
+    return render(request, 'tasks/detail.html', {
+        'task': get_object_or_404(Task, id=id),
     })
 
 def create_task(request):
