@@ -5,6 +5,6 @@ In any case, this is just a simple base and I will continue with another proyect
 
 To start running, open shell and type: <br>
 
-source .venv/bin/activate
+source .venv/bin/activate <br>
 python manage.py runserver <br>
 It should be running in :8000.
